@@ -1,0 +1,25 @@
+<div ng-controller="HomeCtrl">
+  <div class="row">
+    <div class="col-md-4 tree-browser">
+      <js-tree tree-events="select_node:nodeSelected" tree-ajax="/api/tree"></js-tree>
+    </div>
+    <div class="col-md-8 file-viewer" ng-hide="audioPlayer || videoPlayer || imagePlayer">
+      <pre><code>{{fileViewer}}</code></pre>
+    </div>
+    <div class="col-md-8 audio-player" ng-show="audioPlayer">
+      <h3>Now Playing : {{fileName}}</h3>
+      <hr/>
+      <audio id="audio" controls></audio>
+    </div>
+    <div class="col-md-8 video-player" ng-show="videoPlayer">
+      <h3>Now Playing : {{fileName}}</h3>
+      <hr/>
+      <video id="video" controls></video>
+    </div>
+    <div class="col-md-8 image-player" ng-show="imagePlayer">
+      <h3>Now Playing : {{fileName}}</h3>
+      <hr/>
+      <img ng-src="{{imgSrc}}">
+    </div>
+  </div>
+</div>

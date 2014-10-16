@@ -1,0 +1,23 @@
+.tree-browser {
+  overflow: auto;
+  width: 315px;
+  border: 3px solid #999;
+  background: #eee;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.file-viewer {
+  padding-left: 50px;
+  overflow: auto;
+}
+.jstree-custom-folder {
+  background-image: url('../imgs/folder.png') !important;
+  background-position: 0 !important;
+}
+.jstree-custom-file {
+  background-image: url('../imgs/file.png') !important;
+  background-position: 0 !important;
+}
+audio, video, img {
+  width: 100%;
+}
